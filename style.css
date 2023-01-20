@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background-image: url('assets/img/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-login {
+  height: 100vh;
+}
+
+.row-left {
+  height: 100vh;
+  /* background-color: red; */
+}
