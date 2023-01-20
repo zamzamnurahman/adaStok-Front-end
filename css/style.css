@@ -16,7 +16,7 @@
 }
 
 body {
-  background-image: url('assets/img/bg.png');
+  background-image: url('../assets/img/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -33,6 +33,10 @@ body {
   align-items: flex-start;
   height: 80vh;
   /* background-color: red; */
+}
+
+.description {
+  text-shadow: 1px 1px 20px white;
 }
 
 .button-daftar {

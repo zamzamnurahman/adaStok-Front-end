@@ -5,82 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AdaStok - Daftar</title>
-  <!-- link css -->
-  <link rel="stylesheet" href="style.css">
-  <!-- boostrap 5 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
-  ">
+  <title>AdaStok</title>
 </head>
 
 <body>
-
-  <div class="container">
-    <div class="row container-login align-items-center ">
-      <div class="col-md-7">
-        <div class="menu-left">
-          <img src="assets/icon/logo.svg" height="70px" alt="logo-adastok">
-          <h3>ADASTOK Sebuah Aplikasi berbasis Website yang menerapkan sistem untuk manajemen Stok Barang
-            didalamnya terdapat berbagai fitur yakni, kelola barang, kelola pegawai, dan juga Transaksi.</h3>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <div class="card p-4 text-center">
-          <h3>Daftar Akun</h3>
-          <form class="form-group">
-            <input class="form-control p-3 my-4" type="text" placeholder="Nama Pemilik" id="nama">
-            <input class="form-control p-3 my-4" type="email" name="email" placeholder="Alamat Email" id="email">
-            <input class="form-control p-3 my-4" type="password" name="password" placeholder="Password 8+ Karakter"
-              id="password">
-            <input class="form-control p-3 my-4" type="password" name="password" placeholder="Konfirmasi Password"
-              id="confirm_password">
-            <p>Sudah Punya Akun ? <a href="login.html">Masuk</a> </p>
-            <button class="btn btn-warning button-daftar">Daftar Akun</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- boostrap javascript cdn -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    const baseUrl = "http://127.0.0.1:8000/api"
-    var message;
-    var form = document.querySelector('form');
-    var nama = document.getElementById('nama');
-    var email = document.getElementById('email');
-    var password = document.getElementById('password');
-    var confirm_password = document.getElementById('confirm_password');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      daftarUser(nama.value, email.value, password.value, confirm_password.value);
-    })
-
-    async function daftarUser(name, email, password, confirm_password) {
-      const data = {
-        name: name,
-        email: email,
-        password: password,
-        password_confirmation: confirm_password,
-      };
-      const response = await fetch(`${baseUrl}/register`, {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      })
-
-      if (response.status == 201) {
-        window.location.replace('home.html');
-        alert("Berhasil Daftar")
-        return true
+    var token;
+    window.addEventListener("DOMContentLoaded", function () {
+      token = localStorage.getItem('token');
+      if (token == null) {
+        window.location.replace("page/register.html");
+      } else {
+        window.location.replace("page/login.html");
       }
-      alert("Gagal Daftar Akun, Harap perhatikan pengisian Formulir")
-
-    }
+    })
   </script>
 </body>
 
