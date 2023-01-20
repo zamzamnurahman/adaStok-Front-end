@@ -13,10 +13,10 @@
     var token;
     window.addEventListener("DOMContentLoaded", function () {
       token = localStorage.getItem('token');
-      if (token == null) {
-        window.location.replace("page/register.html");
+      if (token != null) {
+        window.location.replace("page/home.html");
       } else {
-        window.location.replace("page/login.html");
+        window.location.replace("page/register.html");
       }
     })
   </script>

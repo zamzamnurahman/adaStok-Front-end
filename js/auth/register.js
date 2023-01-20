@@ -1,6 +1,7 @@
 import { baseUrl } from "../baseUrl.js";
 
 var form = document.querySelector('form');
+var msg = document.getElementById('msg');
 var nama = document.getElementById('nama');
 var email = document.getElementById('email');
 var password = document.getElementById('password');
@@ -8,7 +9,12 @@ var confirm_password = document.getElementById('confirm_password');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
-  daftarUser(nama.value, email.value, password.value, confirm_password.value);
+  if (password.value == confirm_password.value) {
+    daftarUser(nama.value, email.value, password.value, confirm_password.value);
+  } else {
+    msg.style.display = 'block';
+    msg.innerText = 'konfirmasi password tidak sesuai';
+  }
 })
 
 async function daftarUser(name, email, password, confirm_password) {
@@ -27,11 +33,18 @@ async function daftarUser(name, email, password, confirm_password) {
     body: JSON.stringify(data)
   })
 
+  var result = await response.json();
+
   if (response.status == 201) {
     window.location.assign('home.html');
     alert("Berhasil Daftar")
     return true
   }
-  alert("Gagal Daftar Akun, Harap perhatikan pengisian Formulir")
-
+  if (result['email'] != null) {
+    msg.style.display = 'block';
+    msg.innerText = 'Alamat Email sudah terdaftar';
+  } else {
+    msg.style.display = 'block';
+    msg.innerText = 'Gagal Daftar, Coba kembali';
+  }
 }
