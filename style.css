@@ -1,3 +1,13 @@
+:root {
+  --coklat: #E6A851;
+  --white: #ffffff;
+}
+
+/* color */
+.p-color {
+  color: var(--coklat);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,11 +21,23 @@ body {
   background-repeat: no-repeat;
 }
 
+
 .container-login {
   height: 100vh;
 }
 
-.row-left {
-  height: 100vh;
+.menu-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 80vh;
   /* background-color: red; */
+}
+
+.button-daftar {
+  color: white !important;
+  font-weight: bold !important;
+  width: 100%;
+  padding: 2% 0 !important;
 }
