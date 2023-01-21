@@ -13,7 +13,7 @@
   ">
 </head>
 
-<body>
+<body class="bg">
 
   <div class="container">
     <div class="row container-login align-items-center ">
@@ -28,12 +28,16 @@
       <div class="col-md-5">
         <div class="card p-4 text-center">
           <h3>Masuk Akun</h3>
+          <p class="bg-warning-subtle text-danger py-2" style="display: none;" id="msg"></p>
           <form action="" method="post">
-            <input class="form-control p-3 my-4" type="email" name="email" placeholder="Email" id="emailCtrl">
+            <input class="form-control p-3 my-4" type="email" name="email" placeholder="Email" id="emailCtrl" required>
             <input class="form-control p-3 my-4" type="password" name="password" placeholder="Password"
-              id="passwordCtrl">
+              id="passwordCtrl" required>
             <p>Belum Punya Akun ? <a href="register.html">Daftar</a> </p>
-            <button class="btn btn-warning button-daftar">Masuk Akun</button>
+            <button class="btn btn-warning button-daftar ">
+              <div id="text">Daftar</div>
+              <div id="loading"></div>
+            </button>
           </form>
         </div>
       </div>

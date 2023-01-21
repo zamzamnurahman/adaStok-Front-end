@@ -13,7 +13,7 @@
   ">
 </head>
 
-<body>
+<body class="bg">
 
   <div class="container">
     <div class="row container-login align-items-center ">
@@ -28,6 +28,7 @@
       <div class="col-md-5">
         <div class="card p-4 text-center">
           <h3>Daftar Akun</h3>
+          <p class="bg-warning-subtle text-danger py-2" style="display: none;" id="msg"></p>
           <form class="form-group">
             <input class="form-control p-3 my-4" type="text" placeholder="Nama Pemilik" id="nama" required>
             <input class="form-control p-3 my-4" type="email" name="email" placeholder="Alamat Email" id="email"
@@ -46,7 +47,7 @@
 
   <!-- boostrap javascript cdn -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="module" src="js/auth/register.js"></script>
+  <script type="module" src="../js/auth/register.js"></script>
 </body>
 
 </html>

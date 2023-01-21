@@ -15,7 +15,8 @@
 
 }
 
-body {
+
+.bg {
   background-image: url('../assets/img/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -44,4 +45,37 @@ body {
   font-weight: bold !important;
   width: 100%;
   padding: 2% 0 !important;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-menu {
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px 5px rgb(233, 233, 233);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.sub-menu {
+  margin-top: 5px;
+  width: 200px;
+  transition: all .3s;
+}
+
+.sub-menu:hover {
+  scale: 1.1;
+}
+
+.sub-menu img:hover {
+  filter: saturate(-50);
+  -webkit-filter: saturate(-50);
 }
