@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdaStok - Profile</title>
+</head>
+
+<body>
+  <button class="btn btn-danger" id="logout">Log out</button>
+
+  <script>
+    var logout = document.getElementById('logout');
+
+    logout.addEventListener('click', function () {
+      localStorage.clear();
+      window.location.replace("login.html");
+    })
+  </script>
+</body>
+
+</html>
