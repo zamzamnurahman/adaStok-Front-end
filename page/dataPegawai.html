@@ -35,7 +35,7 @@
         </a>
       </li>
       <li class="sub-menu">
-        <a class="d-flex flex-column align-items-center" href="#">
+        <a class="d-flex flex-column align-items-center" href="transaksi.html">
           <img src="../assets/icon/transaksi.svg" height="35" style="filter: saturate(0);">
           <p class="fs-5">Transaksi</p>
         </a>
@@ -47,7 +47,7 @@
         </a>
       </li>
       <li class="sub-menu">
-        <a class="d-flex flex-column align-items-center" href="#">
+        <a class="d-flex flex-column align-items-center" href="about.html">
           <img src="../assets/icon/about.svg" height="35" style="filter: saturate(0);">
           <p class="fs-5">About</p>
         </a>
@@ -63,13 +63,13 @@
       </div>
       <div class="container trailing d-flex justify-content-end align-items-center ">
         <div class="tambah mx-2">
-          <button class="btn btn-lg btn-warning text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">+
-            Tambah</button>
+          <button class="btn btn-lg btn-warning text-light shadow-sm" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">+ Tambah</button>
         </div>
       </div>
     </div>
 
-    <!-- modal tambah barang -->
+    <!-- modal tambah Pegawai -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -99,14 +99,14 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-warning">Simpan</button>
+            <button type="button" class="btn btn-warning text-light">Simpan</button>
           </div>
         </div>
       </div>
     </div>
 
     <!-- table -->
-    <table class="table table-striped" id="datatable">
+    <table class="table table-striped p-4 shadow" id="datatable">
       <thead>
         <tr>
           <th scope="col">No</th>
@@ -153,6 +153,13 @@
   <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
   <script src="https://cdn.datatables.net/select/1.5.0/js/dataTables.select.min.js"></script>
   <script>
+    var token;
+    window.addEventListener("DOMContentLoaded", function () {
+      token = localStorage.getItem('token');
+      if (token == null) {
+        window.location.replace("register.html");
+      }
+    })
     $(document).ready(function () {
       $('#datatable').DataTable({
         select: true

@@ -25,7 +25,7 @@
       <li class="sub-menu">
         <a class=" container d-flex flex-column align-items-center justify-content-center" href="dataBarang.html">
           <img src="../assets/icon/data_barang.svg" height="35">
-          <p class="fs-5 fw-bold">Data Detail Barang</p>
+          <p class="fs-5 fw-bold">Data Barang</p>
         </a>
       </li>
       <li class="sub-menu">
@@ -35,7 +35,7 @@
         </a>
       </li>
       <li class="sub-menu">
-        <a class="d-flex flex-column align-items-center" href="#">
+        <a class="d-flex flex-column align-items-center" href="transaksi.html">
           <img src="../assets/icon/transaksi.svg" height="35" style="filter: saturate(0);">
           <p class="fs-5">Transaksi</p>
         </a>
@@ -47,7 +47,7 @@
         </a>
       </li>
       <li class="sub-menu">
-        <a class="d-flex flex-column align-items-center" href="#">
+        <a class="d-flex flex-column align-items-center" href="about.html">
           <img src="../assets/icon/about.svg" height="35" style="filter: saturate(0);">
           <p class="fs-5">About</p>
         </a>
@@ -59,24 +59,12 @@
     <div class="container-fluid d-flex justify-content-between header pb-4">
       <div class="container title d-flex justify-content-start align-items-center">
         <img src="../assets/icon/data_barang.svg" height="70">
-        <p class="fs-2 fw-bold mx-4">Data Barang</p>
+        <p class="fs-2 fw-bold mx-4">Detail Data Barang</p>
       </div>
       <div class="container trailing d-flex justify-content-end align-items-center ">
-        <div class="dropdown">
-          <a class="btn btn-lg btn-warning dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Pilih Kategori
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Kategori 1</a></li>
-            <li><a class="dropdown-item" href="#">kategori 2</a></li>
-            <li><a class="dropdown-item" href="#">Kategori 3</a></li>
-          </ul>
-        </div>
         <div class="tambah mx-2">
           <button class="btn btn-lg btn-warning text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">+
-            Tambah
-            Barang</button>
+            Tambah Stok Barang</button>
         </div>
       </div>
     </div>
@@ -91,7 +79,7 @@
           </div>
           <div class="modal-body">
             <form>
-              <input id="nama" type="text" class="form-control my-2" placeholder="Nama ">
+              <input id="nama" type="text" class="form-control my-2" placeholder="Jumlah Stok ">
               <input id="tgl_masuk" type="date" class="form-control my-2" placeholder="Tanggal masuk ">
               <input id="tgl_kadaluarsa" type="date" class="form-control my-2" placeholder="Tanggal Kadaluarsa">
             </form>
@@ -104,7 +92,7 @@
     </div>
 
     <!-- table -->
-    <table class="table table-striped" id="datatable">
+    <table class="table shadow p-4" id="datatable">
       <thead>
         <tr>
           <th scope="col">No</th>
@@ -133,6 +121,13 @@
   <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
   <script src="https://cdn.datatables.net/select/1.5.0/js/dataTables.select.min.js"></script>
   <script>
+    var token;
+    window.addEventListener("DOMContentLoaded", function () {
+      token = localStorage.getItem('token');
+      if (token == null) {
+        window.location.replace("register.html");
+      }
+    })
     $(document).ready(function () {
       $('#datatable').DataTable({
         select: true

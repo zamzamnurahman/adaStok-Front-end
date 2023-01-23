@@ -17,8 +17,6 @@ const getProduk = async () => {
     data = await result['data'];
     var rows = []
     for (var i = 0; i < data.length; i++) {
-      var stok = [];
-      stok = data[i]['stok'];
 
       const rowData =
         `
@@ -27,7 +25,7 @@ const getProduk = async () => {
           <td>${data[i]['kode']}</td>
           <td>${data[i]['nama']}</td>
           <td>${data[i]['harga_umum']}</td>
-          <td>${stok ?? 0}</td>
+          <td>${data[i]['total_stock']}</td>
           <td>${data[i]['type']}</td>
           <td><a href="detailBarang.html?id=${data[i]['id']}" class="btn btn-info text-light">Detail</a></td>
         </tr>

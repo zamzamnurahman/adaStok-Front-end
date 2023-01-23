@@ -9,6 +9,7 @@
 }
 
 * {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,6 +28,43 @@
   height: 100vh;
 }
 
+.container-fitur {
+  height: 60vh;
+}
+
+.container-tentang {
+  margin: 10% 0;
+  height: 50vh;
+}
+
+.container-kontak {
+  margin: 10% 0;
+  height: 30vh;
+}
+
+.container-bantu {
+  padding: 10% 0%;
+}
+
+.container-footer {
+  margin-top: 10%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #ffc107;
+}
+
+.menu-left-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+  height: 80vh;
+  /* background-color: red; */
+}
+
 .menu-left {
   display: flex;
   flex-direction: column;
@@ -38,6 +76,21 @@
 
 .description {
   text-shadow: 1px 1px 20px white;
+}
+
+.kartu-fitur {
+  box-shadow: 1px 2px 20px 1px rgb(231, 231, 231);
+  scale: 1;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+}
+
+.kartu-fitur:hover {
+  box-shadow: 3px 5px 20px 1px #ffc107;
+  scale: 1.05;
 }
 
 .button-daftar {
