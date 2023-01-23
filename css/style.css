@@ -70,12 +70,3 @@ a {
   width: 200px;
   transition: all .3s;
 }
-
-.sub-menu:hover {
-  scale: 1.1;
-}
-
-.sub-menu img:hover {
-  filter: saturate(-50);
-  -webkit-filter: saturate(-50);
-}

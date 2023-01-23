@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AdaStok - Data barang</title>
+  <title>AdaStok - Data Detail barang</title>
   <!-- boostrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
   <!-- datatable boostrap -->
@@ -25,7 +25,7 @@
       <li class="sub-menu">
         <a class=" container d-flex flex-column align-items-center justify-content-center" href="dataBarang.html">
           <img src="../assets/icon/data_barang.svg" height="35">
-          <p class="fs-5 fw-bold">Data Barang</p>
+          <p class="fs-5 fw-bold">Data Detail Barang</p>
         </a>
       </li>
       <li class="sub-menu">
@@ -81,20 +81,19 @@
       </div>
     </div>
 
-    <!-- modal tambah barang -->
+    <!-- modal tambah stok barang -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Barang</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Stok Barang</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form>
-              <input id="kode" type="text" class="form-control my-2" placeholder="Kode ">
               <input id="nama" type="text" class="form-control my-2" placeholder="Nama ">
-              <input id="kategori" type="text" class="form-control my-2" placeholder="Kategori ">
-              <input id="harga" type="number" class="form-control my-2" placeholder="Harga ">
+              <input id="tgl_masuk" type="date" class="form-control my-2" placeholder="Tanggal masuk ">
+              <input id="tgl_kadaluarsa" type="date" class="form-control my-2" placeholder="Tanggal Kadaluarsa">
             </form>
           </div>
           <div class="modal-footer">
@@ -109,23 +108,21 @@
       <thead>
         <tr>
           <th scope="col">No</th>
-          <th scope="col">Kode</th>
-          <th scope="col">Nama Barang</th>
-          <th scope="col">Harga</th>
           <th scope="col">Stok</th>
-          <th scope="col">Kategori</th>
+          <th scope="col">Tanggal Masuk</th>
+          <th scope="col">Tanggal Keluar</th>
           <th scope="col">#</th>
         </tr>
       </thead>
-      <tbody id="table-body">
-        <!-- data -->
+      <tbody id="table-stok">
+        <!-- data stok-->
 
 
       </tbody>
     </table>
 
   </section>
-  <script type="module" src="../js/produk/produk_handler.js"></script>
+  <script type="module" src="../js/produk/detailProduk_handler.js"></script>
   <!-- cdn js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <!-- jquery -->
