@@ -28,6 +28,8 @@ async function daftarUser(name, email, password, confirm_password) {
 
   const response = await fetch(`${baseUrl}/register`, {
     method: 'POST',
+    mode: "no-cors",
+    credentials: "same-origin",
     headers: {
       "Content-Type": "application/json"
     },
