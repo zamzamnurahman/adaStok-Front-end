@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdaStok - Profile</title>
+  <!-- boostrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <!-- css local -->
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+  <!-- navbar main -->
+  <nav class="container navbar mt-4 navbar-menu">
+    <ul class="container m-0 d-flex justify-content-evenly align-items-center">
+      <li class="sub-menu">
+        <a class=" container d-flex flex-column align-items-center justify-content-center" href="dataBarang.html">
+          <img src="../assets/icon/data_barang.svg" height="35" style="filter: saturate(0);">
+          <p class="fs-5 ">Data Barang</p>
+        </a>
+      </li>
+      <li class="sub-menu">
+        <a class="d-flex flex-column align-items-center" href="dataPegawai.html">
+          <img src="../assets/icon/data_pegawai.svg" height="35" style="filter: saturate(0);">
+          <p class="fs-5">Data Pegawai</p>
+        </a>
+      </li>
+      <li class="sub-menu">
+        <a class="d-flex flex-column align-items-center" href="transaksi.html">
+          <img src="../assets/icon/transaksi.svg" height="35" style="filter: saturate(0);">
+          <p class="fs-5">Transaksi</p>
+        </a>
+      </li>
+      <li class="sub-menu">
+        <a class="d-flex flex-column align-items-center" href="profile.html">
+          <img src="../assets/icon/profil.svg" height="35">
+          <p class="fs-5 fw-bold">Profil</p>
+        </a>
+      </li>
+      <li class="sub-menu">
+        <a class="d-flex flex-column align-items-center" href="about.html">
+          <img src="../assets/icon/about.svg" height="35" style="filter: saturate(0);">
+          <p class="fs-5">About</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="container-fluid p-lg-5">
+    <!-- header -->
+    <div class="container-fluid title d-flex justify-content-start align-items-center">
+      <img src="../assets/icon/profil.svg" height="70">
+      <p class="fs-2 fw-bold mx-4">Data Profil</p>
+    </div>
+
+    <!-- profil -->
+    <div class="container shadow p-4 my-3">
+      <div class=" row text-center">
+        <div class="col-12">
+          <img src="../assets/icon/profil.svg" height="200">
+        </div>
+      </div>
+      <div class="container row p-lg-5 mx-auto text-center">
+        <div class="col-6">
+          <input class="form-control-lg my-1" type="text" placeholder="Nama Lengkap" value="Zamzam Nurahman">
+          <input class="form-control-lg my-1" type="text" placeholder="Alamat Email " value="zamzamnurahman@gmail.com">
+        </div>
+        <div class="col-6">
+          <textarea class="form-control-lg" type="text" placeholder="Alamat" value="Alaamatt nyaa di sisnii"></textarea>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-12">
+          <button class="btn btn-danger" id="logout">Log out</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    var token;
+    window.addEventListener("DOMContentLoaded", function () {
+      token = localStorage.getItem('token');
+      if (token == null) {
+        window.location.replace("register.html");
+      }
+    })
+    var logout = document.getElementById('logout');
+
+    logout.addEventListener('click', function () {
+      localStorage.clear();
+      window.location.replace("login.html");
+    })
+  </script>
+</body>
+
+</html>

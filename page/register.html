@@ -13,14 +13,42 @@
   ">
 </head>
 
-<body class="bg">
+<body>
+  <!-- navbar -->
+  <nav class="container-fluid navbar navbar-expand-lg fixed-top bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand " href="#"><img src="../assets/icon/logo.svg" height="70px" alt="logo-adastok"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " href="#">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#fitur">Fitur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tentang">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontak">Kontak</a>
+          </li>
+        </ul>
+      </div>
+      <a href="#"><button class="btn btn-warning text-light mx-1">Daftar</button></a>
+      <a href="login.html"><button class="btn btn-warning text-light mx-1">Masuk</button></a>
+    </div>
+  </nav>
 
-  <div class="container">
-    <div class="row container-login align-items-center ">
+  <div class="bg">
+    <div class="row container mx-auto  container-login align-items-center ">
       <div class="col-md-7">
-        <div class="menu-left">
-          <img src="../assets/icon/logo.svg" height="70px" alt="logo-adastok">
-          <h3 class="description">ADASTOK Sebuah Aplikasi berbasis Website yang menerapkan sistem untuk manajemen Stok
+        <div class="menu-left-register">
+          <h3 class="description" id="fitur">ADASTOK Sebuah Aplikasi berbasis Website yang menerapkan sistem untuk
+            manajemen Stok
             Barang
             didalamnya terdapat berbagai fitur yakni, kelola barang, kelola pegawai, dan juga Transaksi.</h3>
         </div>
@@ -43,6 +71,94 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="container mx-auto container-tentang  mx-2">
+    <div class="row text-center">
+      <div class="col-sm-12">
+        <h1>FITUR-FITUR</h1>
+      </div>
+    </div>
+
+    <div class="row my-5">
+      <div class="col-sm-4 text-center">
+        <div class="kartu-fitur p-3 px-5 d-flex flex-column">
+          <img class="my-4" src="../assets/img/kelola_barang.svg" height="100">
+          <h5>Kelola Barang</h5>
+          <p>Mengelola Barang dengan detail harga dan juga data stok </p>
+        </div>
+      </div>
+
+      <div class="col-sm-4 text-center">
+        <div class="kartu-fitur p-3 px-5 d-flex flex-column">
+          <img class="my-4" src="../assets/img/kelola_pegawai.svg" height="100">
+          <h5>Kelola Pegawai</h5>
+          <p>Mengelola Pegawai untuk kemudahan pemilik dalam mendata Barang</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4 ">
+        <div class="p-3 px-5 d-flex flex-column kartu-fitur">
+          <img class="my-4 " src="../assets/img/kelola_transaksi.svg" height="100">
+          <h5>Kelola Transaksi</h5>
+          <p>Kelola transaksi untuk barang keluar dalam penjualan Barang</p>
+        </div>
+      </div>
+    </div>
+    <span id="tentang"></span>
+  </div>
+
+  <div class="container container-fitur mx-auto shadow my-5 pt-5">
+    <div class="row text-center">
+      <div class="col-sm-12">
+        <h1>TENTANG</h1>
+      </div>
+    </div>
+    <div class="row text-center mt-5">
+      <div class="col-sm-8 offset-2">
+        <h3>ADASTOK Sebuah Aplikasi berbasis Website yang menerapkan
+          sistem untuk manajemen Stok Barang didalamnya terdapat
+          berbagai fitur yakni, kelola barang, kelola pegawai, dan juga Transaksi.</h3>
+      </div>
+    </div>
+    <span id="kontak"></span>
+  </div>
+
+  <div class="container container-kontak mx-auto ">
+    <div class="row text-center">
+      <div class="col-sm-12">
+        <h1>KONTAK KAMI</h1>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-evenly my-5 px-5">
+      <div class="container align-items-center justify-content-evenly d-flex shadow px-5 py-4 mx-4">
+        <img src="../assets/icon/wa.svg">
+        <h2>Whatsapp</h2>
+      </div>
+      <div class="container align-items-center justify-content-evenly d-flex shadow px-5 py-2 mx-4">
+        <img src="../assets/icon/email.svg">
+        <h2>Email</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="shadow container container-bantu">
+    <div class="row">
+      <div class="col-sm-7 offset-1">
+        <h1>Bantu usaha anda sekarang juga. </h1>
+      </div>
+      <div class="col-sm-4">
+        <div class="text-center">
+          <button class="btn btn-lg btn-warning text-light mx-2">Masuk</button>
+          <button class="btn btn-lg btn-warning text-light mx-2">Daftar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="container-footer bg-warning text-center">
+    <h3>Copyright@2023</h3>
   </div>
 
   <!-- boostrap javascript cdn -->

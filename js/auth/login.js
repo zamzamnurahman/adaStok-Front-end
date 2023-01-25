@@ -14,7 +14,7 @@ form.addEventListener('submit', function (e) {
   masukUser(emailCtrl.value, passwordCtrl.value);
 })
 
-async function masukUser(email, password) {
+export const masukUser = async (email, password) => {
   const data = {
     email: email,
     password: password,
@@ -30,11 +30,13 @@ async function masukUser(email, password) {
   var result = await response.json();
 
   if (response.status == 200) {
-    alert("Berhasil Masuk")
     var token = result['token'];
+    var idUser = result['user']['id'];
     localStorage.setItem('token', token);
-    window.location.replace('../../page/home.html');
+    localStorage.setItem('idUser', idUser);
+    window.location.replace('../../page/dataBarang.html');
     removeLoading();
+    alert("Berhasil Masuk")
     return true
   }
   removeLoading();

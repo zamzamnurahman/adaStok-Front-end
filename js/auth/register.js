@@ -1,4 +1,5 @@
 import { baseUrl } from "../baseUrl.js";
+import { masukUser } from "./login.js";
 
 var form = document.querySelector('form');
 var msg = document.getElementById('msg');
@@ -36,8 +37,8 @@ async function daftarUser(name, email, password, confirm_password) {
   var result = await response.json();
 
   if (response.status == 201) {
-    window.location.assign('home.html');
     alert("Berhasil Daftar")
+    masukUser(email, password);
     return true
   }
   if (result['email'] != null) {
