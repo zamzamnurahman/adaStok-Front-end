@@ -8,8 +8,7 @@ const getProduk = async () => {
   var response = await fetch(url, {
     headers: {
       "Authorization": `Bearer ${localStorage.getItem('token')}`
-    }, mode: "no-cors",
-    credentials: "same-origin"
+    },
   });
   var result = await response.json();
 
