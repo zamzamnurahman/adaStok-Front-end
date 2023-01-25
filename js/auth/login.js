@@ -30,6 +30,8 @@ export const masukUser = async (email, password) => {
   var result = await response.json();
 
   if (response.status == 200) {
+    console.log('berhasi;l');
+
     var token = result['token'];
     var idUser = result['user']['id'];
     localStorage.setItem('token', token);
